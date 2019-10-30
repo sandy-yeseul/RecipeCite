@@ -11,10 +11,10 @@ namespace Assignment1.Models
         {
             new Recipe()
             {
-                Name = "Pizza",
+                Name = "American Pizza",
                 Time= 100,
-                Description = "",
-                Ingredients =""
+                Description = "American style pizza without pepperonies",
+                Ingredients ="Pizaa dough, cheese"
             }
         };
         public static IEnumerable<Recipe> Recipes

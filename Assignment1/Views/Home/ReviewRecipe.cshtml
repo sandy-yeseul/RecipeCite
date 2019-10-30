@@ -1,21 +1,29 @@
-﻿@model Assignment1.Models.Review
+﻿@model Review
 @{
-    ViewData["Title"] = "ReviewRecipe";
+
     Layout = "_Layout";
+    ViewBag.Title = "Recipe Review";
 }
 
-    <h2>Recipe Reviews!</h2>
-    <div class="text-center">
-        <form asp-action="ReviewRecipe" method="post">
-            <label asp-for="RecipeName">Recipe Name: </label>
-            <input name="name"/>
-            <label asp-for="UserId">User ID: </label>
-            <input asp-for="UserId" />
-            <label asp-for="Nickname">Nickname: </label>
-            <input asp-for="Nickname" />
-            <label asp-for="Content">Content: </label>
-            <input asp-for="Content" />
-            <button type="submit">Write Review</button>
-        </form>
+
+<div class="panel panel-success">
+    <div class="panel-heading text-center"><h4>Write Recipe Reviews!</h4></div>
+    <div class="panel-body">
+        <form class="p-a-1" asp-action="ReviewRecipe" asp-controller="Home" method="post">
+            <div asp-validation-summary="All"></div>
+                <div class="form-group">
+                    <label asp-for="UserId">User ID: </label>
+                    <input asp-for="UserId" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Nickname">Nickname: </label>
+                    <input asp-for="Nickname" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Content">Review: </label>
+                    <input asp-for="Content" />
+                </div>
+                <button type="submit">Write Review</button>  | <button asp-action="RecipeList">Cancel</button>
+         </form>
     </div>
-    
+</div>
