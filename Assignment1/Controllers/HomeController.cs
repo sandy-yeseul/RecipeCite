@@ -11,13 +11,6 @@ namespace Assignment1.Controllers
     {
         public ViewResult Index()
         {
-            //Recipe testRecipe = new Recipe()
-            //{
-            //    Name = "Chocolate Cake",
-            //    Time = 130,
-            //    Description = "A sweet chocolate cake",
-            //    Ingredient = "chocolate"
-            //};
             return View();
         }
         [HttpGet]

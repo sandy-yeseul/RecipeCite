@@ -14,7 +14,7 @@ namespace Assignment1.Models
                 Name = "Pizza",
                 Time= 100,
                 Description = "",
-                Ingredient =""
+                Ingredients =""
             }
         };
         public static IEnumerable<Recipe> Recipes

@@ -4,13 +4,13 @@
     Layout = "_Layout";
 }
 
-    <h2>View Recipe!</h2>
+    <h4>View Recipe!</h4>
     @if (TempData["recipe"] != null)
     {
         <p>@TempData["recipe"]</p>
     }
-    <div class="text-center">
-        <table>
+    <div class="text-center" >
+        <table class="table table-sm table-striped table-bordered">
             <thead>
                 <tr>
                     <th>Name</th>
@@ -24,7 +24,7 @@
                         <td>@Model.Name</td>
                         <td>@Model.Time</td>
                         <td>@Model.Description</td>
-                        <td>@Model.Ingredient</td>
+                        <td>@Model.Ingredients</td>
                     </tr>
                 
             </tbody>
