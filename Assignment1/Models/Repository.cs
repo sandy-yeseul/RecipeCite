@@ -30,7 +30,22 @@ namespace Assignment1.Models
         }
         
 
-        private static List<Review> reviews = new List<Review>();
+        private static List<Review> reviews = new List<Review>()
+        {
+            new Review
+            {
+                RecipeName = new Recipe
+                {
+                    Name = "American Pizza",
+                Time= 100,
+                Description = "American style pizza without pepperonies",
+                Ingredients ="Pizaa dough, cheese"
+                },
+                UserId = 1004,
+                Nickname="Angel",
+                Content="Delicious and warm"
+            }
+        };
         public static IEnumerable<Review> Reviews
         {
             get

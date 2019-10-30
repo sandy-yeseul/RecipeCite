@@ -1,0 +1,26 @@
+﻿@model IEnumerable<Review>
+@{
+    Layout = "_Layout";
+    ViewBag.Title = "Review List";
+}
+
+<div class="panel-body">
+    <h4>Review List!</h4>
+    <table class="table table-sm table-striped table-bordered">
+        <tr>
+            <td>Recipe Name</td>
+            <td>User ID</td>
+            <td>Nickname</td>
+            <td>Review</td>
+        </tr>
+        @foreach (Review rv in Model)
+        {
+            <tr>
+                <td><a asp-action="ViewRecipe" asp-route-name="@rv.RecipeName.Name">@rv.RecipeName.Name</a></td>
+                <td>@rv.UserId</td>
+                <td>@rv.Nickname</td>
+                <td>@rv.Content</td>
+            </tr>
+        }
+    </table>
+</div>

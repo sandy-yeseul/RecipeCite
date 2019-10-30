@@ -50,7 +50,8 @@ namespace Assignment1.Controllers
                 review.RecipeName = recipe;
 
                 Repository.AddReviews(review);
-                return View( review);
+                TempData["review"] = "Thank you for adding your review!";
+                return View("ReviewList");
             }
             else
             {
@@ -60,6 +61,10 @@ namespace Assignment1.Controllers
         public ViewResult ViewRecipe( string name)
         {
             return View(Repository.Recipes.FirstOrDefault(r => r.Name == name));
+        }
+        public ViewResult ReviewList()
+        {
+            return View(Repository.Reviews);
         }
     }
 }
