@@ -1,0 +1,21 @@
+﻿@model Assignment1.Models.Recipe
+@{
+    ViewData["Title"] = "AddRecipe";
+    Layout = "_Layout";
+}
+
+    <h2>Add Recipe!</h2>
+    <div class="text-center">
+        <form asp-action="AddRecipe" method="Post">
+            <label asp-for="Name">Name: </label>
+            <input asp-for="Name" />
+            <label asp-for="Time">Time Consuming: </label>
+            <input asp-for="Time" />
+            <label asp-for="Description">Description: </label>
+            <input asp-for="Description" />
+            <label asp-for="Ingredient">Ingredient: </label>
+            <input asp-for="Ingredient" />
+            <button type="submit">Add recipe</button>
+        </form>
+    </div>
+

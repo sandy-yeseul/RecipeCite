@@ -1,0 +1,21 @@
+﻿@model Assignment1.Models.Review
+@{
+    ViewData["Title"] = "ReviewRecipe";
+    Layout = "_Layout";
+}
+
+    <h2>Recipe Reviews!</h2>
+    <div class="text-center">
+        <form asp-action="ReviewRecipe" method="post">
+            <label asp-for="RecipeName">Recipe Name: </label>
+            <input name="name"/>
+            <label asp-for="UserId">User ID: </label>
+            <input asp-for="UserId" />
+            <label asp-for="Nickname">Nickname: </label>
+            <input asp-for="Nickname" />
+            <label asp-for="Content">Content: </label>
+            <input asp-for="Content" />
+            <button type="submit">Write Review</button>
+        </form>
+    </div>
+    

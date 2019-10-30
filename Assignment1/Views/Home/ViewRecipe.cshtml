@@ -1,0 +1,35 @@
+﻿@model Assignment1.Models.Recipe
+@{
+    ViewData["Title"] = "ViewRecipe";
+    Layout = "_Layout";
+}
+
+    <h2>View Recipe!</h2>
+    @if (TempData["recipe"] != null)
+    {
+        <p>@TempData["recipe"]</p>
+    }
+    <div class="text-center">
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Time Consuming</th>
+                    <th>Description</th>
+                    <th>Ingredients</th>
+                </tr>
+            </thead>
+            <tbody>
+                    <tr>
+                        <td>@Model.Name</td>
+                        <td>@Model.Time</td>
+                        <td>@Model.Description</td>
+                        <td>@Model.Ingredient</td>
+                    </tr>
+                
+            </tbody>
+        </table>
+    </div>
+
+
+

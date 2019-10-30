@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/StyleSheet.css" />
+</head>
+<body>
+    <img src="~/images/bakery_pastry_cooking-06-512.png" class="logo" />
+    <h1 class="header">Recipe System</h1>
+    <a asp-action="Index">Home</a> |
+    <a asp-action="RecipeList">Recipe List</a> |
+    <a asp-action="AddRecipe">Add Recipe Here!</a> |
+    <a asp-action="ReviewRecipe">Recipe Reviews!</a>
+
+    <div>
+        @RenderBody()
+    </div>
+    <div class="copy">
+        &copy;&nbsp;Copyright Yeseul Kang, #301029474
+    </div>
+</body>
+</html>
