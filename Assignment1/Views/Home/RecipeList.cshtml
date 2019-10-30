@@ -4,16 +4,14 @@
     ViewBag.Title = "Recipe List";
 }
 
-    <h2>Recipe List</h2>
+<div class="panel-body">
     <div class="text-center">
-        <h3>Recipe List</h3>
-        <table>
+        <h4>Recipe List</h4>
+        <table class="table table-sm table-striped table-bordered">
             <thead>
                 <tr>
                     <th>Name</th>
-                    <th>Time Consuming</th>
                     <th>Description</th>
-                    <th>Ingredients</th>
                 </tr>
             </thead>
             <tbody>
@@ -22,10 +20,10 @@
                     <tr>
                         <td><a asp-action="ViewRecipe" asp-route-name="@r.Name">@r.Name</a></td>
                         <td>@r.Description</td>
-                        <td>@r.Ingredients</td>
                     </tr>
                 }
             </tbody>
         </table>
     </div>
-    
+
+</div>

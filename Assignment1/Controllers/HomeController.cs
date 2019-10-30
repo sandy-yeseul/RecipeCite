@@ -34,7 +34,7 @@ namespace Assignment1.Controllers
         }
         public ViewResult RecipeList()
         {
-            return View(Repository.Recipes);
+            return View(Repository.Recipes.OrderBy(r => r.Name));
         }
         [HttpGet]
         public ViewResult ReviewRecipe()
