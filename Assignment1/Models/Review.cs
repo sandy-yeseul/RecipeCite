@@ -7,7 +7,7 @@ namespace Assignment1.Models
 {
     public class Review
     {
-        public Recipe RecipeName { get; set; }
+        public string RecipeName { get; set; }
         public int UserId { get; set; }
         public string Nickname { get; set; }
         public string Content { get; set; }

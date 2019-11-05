@@ -1,38 +1,38 @@
 ﻿@model Recipe
 @{
-    ViewData["Title"] = "ViewRecipe";
     Layout = "_Layout";
+    ViewBag.Title = "Thank you";
 }
 
-    
-    @if (TempData["recipe"] != null)
-    {
-        <p>@TempData["recipe"]</p>
-    }
-        <div class="text-center">
-            <h4>View Recipe!</h4>
-            <table class="table table-sm table-striped table-bordered">
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Time Consuming</th>
-                        <th>Description</th>
-                        <th>Ingredients</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>@Model.Name</td>
-                        <td>@Model.Time</td>
-                        <td>@Model.Description</td>
-                        <td>@Model.Ingredients</td>
-                    </tr>
 
-                </tbody>
-            </table>
-            <a asp-action="ReviewRecipe">Write Review</a> | 
-            <a asp-action="RecipeList">Close</a>
-        </div>
+@if (TempData["recipe"] != null)
+{
+    <p>@TempData["recipe"]</p>
+}
+<div class="text-center">
+    <h4>View Recipe!</h4>
+    <table class="table table-sm table-striped table-bordered">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Time Consuming</th>
+                <th>Description</th>
+                <th>Ingredients</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>@Model.Name</td>
+                <td>@Model.Time</td>
+                <td>@Model.Description</td>
+                <td>@Model.Ingredients</td>
+            </tr>
+
+        </tbody>
+    </table>
+    <a asp-action="AddReview" asp-route-name="@Model.Name">Write Review</a> |
+    <a asp-action="RecipeList">Close</a>
+</div>
 
 
 

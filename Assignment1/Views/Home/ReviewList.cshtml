@@ -14,17 +14,17 @@
                 <td>Nickname</td>
                 <td>Review</td>
             </tr>
-            @foreach (Review rv in Model)
+            @foreach (Review v in Model)
             {
                 <tr>
-                    <td><a asp-action="ViewRecipe" asp-route-name="@rv.RecipeName.Name">@rv.RecipeName.Name</a></td>
-                    <td>@rv.UserId</td>
-                    <td>@rv.Nickname</td>
-                    <td>@rv.Content</td>
+                    <td><a asp-action="ViewRecipe" asp-route-name="@v.RecipeName">@v.RecipeName</a></td>
+                    <td>@v.UserId</td>
+                    <td>@v.Nickname</td>
+                    <td>@v.Content</td>
                 </tr>
             }
         </table>
 
-        <a asp-action="ReviewRecipe">Write Review</a>
+        <a asp-action="AddReview">Write Review</a>
     </div>
 </div>

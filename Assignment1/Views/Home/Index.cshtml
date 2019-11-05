@@ -1,17 +1,19 @@
-﻿@model  Assignment1.Models.Recipe
+﻿@model Recipe
 @{
-    ViewData["Title"] = "Home";
     Layout = "_Layout";
+    ViewBag.Title = "Home";
 }
 
-    
+
 <div class="text-center">
     <h2>Home</h2>
     <h3>Welcome! See the list of recipe or add your own recipe!</h3>
-    <ul>
-        <li><a asp-action="RecipeList">See the Recipe List</a></li>
-        <li><a asp-action="AddRecipe">Add Your Own Recipe!</a></li>
-    </ul>
 </div>
+    <ul>
+        <li class="indexList"><a asp-action="RecipeList">See the Recipe List!</a></li>
+        <li class="indexList"><a asp-action="AddRecipe">Add Your Own Recipe!</a></li>
+        <li class="indexList"><a asp-action="ReviewList">See the Review List!</a></li>
+    </ul>
+
 
 

@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Assignment1.Models.Recipe>
+﻿@model IEnumerable<Recipe>
 @{
     Layout = "_Layout";
     ViewBag.Title = "Recipe List";
@@ -15,7 +15,7 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach (Assignment1.Models.Recipe r in Model)
+                @foreach (Recipe r in Model)
                 {
                     <tr>
                         <td><a asp-action="ViewRecipe" asp-route-name="@r.Name">@r.Name</a></td>

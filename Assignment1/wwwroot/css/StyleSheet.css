@@ -22,3 +22,18 @@ body {
     margin-left: auto;
     margin-right: auto;
 }
+
+.indexList {
+    margin: auto;
+    width: 20%;
+}
+
+.formAlign {
+    text-align: right;
+    margin: auto;
+    width: 50%;
+}
+
+.formButton{
+    margin : auto;
+}

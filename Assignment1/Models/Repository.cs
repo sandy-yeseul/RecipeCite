@@ -34,13 +34,7 @@ namespace Assignment1.Models
         {
             new Review
             {
-                RecipeName = new Recipe
-                {
-                    Name = "American Pizza",
-                Time= 100,
-                Description = "American style pizza without pepperonies",
-                Ingredients ="Pizaa dough, cheese"
-                },
+                RecipeName = "American Pizza",
                 UserId = 1004,
                 Nickname="Angel",
                 Content="Delicious and warm"

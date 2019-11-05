@@ -1,0 +1,10 @@
+﻿@model Review
+@{
+    Layout = "_Layout";
+    ViewBag.Title = "Thank you";
+}
+<div class="text-center">
+    <h4>Thank you for your review! Your review to @Model.RecipeName has been successfully saved!</h4>
+    <a asp-action="ReviewList">Reviews!</a>
+    <a asp-action="RecipeList">Recipes!</a>
+</div>

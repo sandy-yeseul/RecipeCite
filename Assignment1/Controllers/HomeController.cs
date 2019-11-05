@@ -37,21 +37,30 @@ namespace Assignment1.Controllers
             return View(Repository.Recipes.OrderBy(r => r.Name));
         }
         [HttpGet]
-        public ViewResult ReviewRecipe()
+        public ViewResult AddReview(string name)
         {
-            return View();
+            //Review review = new Review
+            //{
+            //    RecipeName = name
+            //}
+            //;
+            return View(new Review { RecipeName = name});
         }
         [HttpPost]
-        public ViewResult ReviewRecipe(Review review, string name)
+        public ViewResult AddReview(Review review)
         {
+            if (!(Repository.Recipes.Any( r => r.Name == review.RecipeName)))
+            {
+                ModelState.AddModelError("", "Reciepe doesn't exist");
+            }
             if (ModelState.IsValid)
             {
-                Recipe recipe = Repository.Recipes.FirstOrDefault(r => r.Name == name);
-                review.RecipeName = recipe;
+                //Recipe recipe = Repository.Recipes.FirstOrDefault(r => r.Name == rvName);
+                //review.RecipeName = recipe;
 
                 Repository.AddReviews(review);
-                TempData["review"] = "Thank you for adding your review!";
-                return View("ReviewList");
+                //TempData["review"] = "Thank you for adding your review!";
+                return View("ThankYouReview", review);
             }
             else
             {

@@ -1,12 +1,14 @@
-﻿@model Assignment1.Models.Recipe
+﻿@model Recipe
 @{
-    ViewData["Title"] = "AddRecipe";
     Layout = "_Layout";
+    ViewBag.Title = "Add Recipe";
 }
 
 <div class="panel panel-success">
     <div class="panel-heading text-center"><h4>Add Recipe!</h4></div>
     <div class="panel-body">
         @Html.Partial("AddingRecipeForm")
+
+
     </div>
 </div>
