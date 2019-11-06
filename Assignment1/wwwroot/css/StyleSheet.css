@@ -35,5 +35,10 @@ body {
 }
 
 .formButton{
-    margin : auto;
+    margin-left : 42%;
+}
+.buttons {
+    background-color: white;
+    color: black;
+    border: 2px solid skyblue;
 }

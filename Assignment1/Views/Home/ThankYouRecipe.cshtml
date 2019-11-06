@@ -1,0 +1,9 @@
+﻿@model Recipe
+@{
+    Layout = "_Layout";
+    ViewBag.Title = "Thank you";
+}
+<div class="text-center">
+    <h4>Thank you for adding your recipe! Your recipe named as @Model.Name has been successfully saved!</h4>
+    <a asp-action="ViewRecipe" asp-route-name="@Model.Name" class="btn btn-sm btn-group-toggle">Close</a>
+</div>

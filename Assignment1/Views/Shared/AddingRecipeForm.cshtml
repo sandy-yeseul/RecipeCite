@@ -4,21 +4,23 @@
     <div asp-validation-summary="All"></div>
 
     <div class="form-group">
-        <label asp-for="Name">Name: </label>
+        <label asp-for="Name" class="formAlign">Name: </label>
         <input asp-for="Name" />
     </div>
     <div class="form-group">
-        <label asp-for="Time">Time Consuming: </label>
+        <label asp-for="Time" class="formAlign">Time Consuming: </label>
         <input asp-for="Time" />
     </div>
     <div class="form-group">
-        <label asp-for="Description">Description: </label>
+        <label asp-for="Description" class="formAlign">Description: </label>
         <input asp-for="Description" />
     </div>
     <div class="form-group">
-        <label asp-for="Ingredients">Ingredient: </label>
+        <label asp-for="Ingredients" class="formAlign">Ingredient: </label>
         <input asp-for="Ingredients" />
     </div>
-    <button type="submit">Save</button>
-    <button asp-action="Index">Cancel</button>
+    <div class="formButton">
+        <button class="btn btn-primary type="submit">Save</button> | 
+        <button class="btn btn-dark" asp-action="Index">Cancel</button>
+    </div>
 </form>

@@ -24,8 +24,7 @@ namespace Assignment1.Controllers
             if (ModelState.IsValid)
             {
                 Repository.AddRecipes(recipe);
-                TempData["recipe"] = "Thank you for adding your recipe!";
-                return View("ViewRecipe", recipe);
+                return View("ThankYouRecipe", recipe);
             }
             else
             {
